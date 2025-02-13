@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+header .logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #333;
+    color: white;
+}
+
+#hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button:focus {
+    outline: none;
+}
+
+.cta-button:active {
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+
+#blog {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.1);
+}
+
+.blog-card h3 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.blog-card p {
+    padding: 0 20px 20px;
+}
+
+
+#categories {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.category-btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    transform: scale(1.2);
+    background-color: #0097a7;
+}
+
+
+#subscribe {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#subscribe form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#subscribe input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subscribe-btn {
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: box-shadow 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    box-shadow: 0 0 10px #00bcd4;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: rotate(15deg);
+}
+
+.social-icons a:active {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">My Blog</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="hero">
+        <h1>Welcome to My Blog</h1>
+        <p>Discover insightful articles and stories</p>
+        <button class="cta-button">Get Started</button>
+    </section>
+
+ 
+    <section id="blog">
+        <h2>Latest Posts</h2>
+        <div class="blog-posts">
+            <div class="blog-card">
+           
+                <h3>Post Title 1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores est totam reprehenderit explicabo. Unde eaque voluptatum necessitatibus optio incidunt dignissimos. Accusamus veniam rerum expedita explicabo sed molestiae quo, excepturi maiores.
+                </p>
+            </div>
+            <div class="blog-card">
+              
+                <h3>Post Title 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio sed laborum inventore laudantium placeat rerum expedita aliquam eos adipisci tenetur, neque sint nam unde, suscipit dolores error officia quae aperiam.</p>
+            </div>
+            <div class="blog-card">
+               
+                <h3>Post Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ea id doloremque. Placeat eum at dolorum, saepe, corrupti, molestias fugiat consequuntur veniam dolorem est et eligendi. Temporibus amet voluptatum illo?</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="categories">
+        <h2>Categories</h2>
+        <div class="categories">
+            <button class="category-btn">Technology</button>
+            <button class="category-btn">Lifestyle</button>
+            <button class="category-btn">Travel</button>
+        </div>
+    </section>
+
+    <section id="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <button class="subscribe-btn">Subscribe</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
