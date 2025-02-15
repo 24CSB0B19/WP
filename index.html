@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India-Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lexend+Giga:wght@100..900&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=Lexend+Giga:wght@100..900&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration:none;
+            box-sizing: border-box;
+        }
+        header{
+	font-family: 'Bebas Neue';
+	position:relative;
+	margin:0;
+	font-size: 4em;
+	font-weight:900;
+	color :red;
+	z-index: 1;
+	overflow :hidden;
+    text-align:center;
+
+}
+
+/* header:before{
+	content:' ';
+	position:absolute;
+	left:120%;
+	width:120%;
+	height:100%;
+	background: linear-gradient(90deg, transparent , 0%, #000 5%, #000 100%);
+	animation: animate 5s linear forwards;
+	animation-iteration-count:infinite;
+} */
+
+@keyframes animate{
+	0%{
+		left:110%;
+
+	}
+	100%{
+		left:-20%;
+		
+	}
+}
+
+header span{
+	color: rgb(34,67,98);
+}
+/* 
+        header{
+            font-family:'Lexend Giga';
+            font-size: 50px;
+            background-color:bisque;
+            color:darkmagenta;
+            text-align: center;
+        } */
+
+        .navigation{
+            background:crimson;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .navdiv{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+        }
+
+        .logo{
+            font-size:55px;
+            font-weight:600;
+            color:white;
+        }
+        li{
+            list-style:none;
+            display:inline-block;
+
+        }
+        li a{
+            color:white;
+            font-size:30px;
+            font-weight:bold;
+            margin-right:25px;
+            padding-top:15px;
+        }
+        button{
+            background-color:black;
+            margin-left:10px;
+            border-radius:10px;
+            float:right;
+            padding:10px;
+            width:90px;
+
+        }
+        button a{
+            color:white;
+            font-weight:bold;
+            font-size:15px;
+        }
+
+        body{
+            /* background-image:url(https://media.istockphoto.com/id/1045895072/vector/india-colored-skyline-travel-and-tourism-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=gP-8wkeM41YWDcfn6yXOGc7AwOAZg5T45g_R4ru0Oq0=) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment:fixed;
+            background-size: cover; */
+            background-color: black;
+
+        }
+         
+        .flex-container{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:row-reverse;
+            flex-wrap:wrap-reverse;
+            justify-content:space-around;
+            margin:30px;
+        }
+        .flex-box{
+            width:200px;
+            height:200px;
+            background:transparent;
+            border: solid black 2px;
+            color:black;
+            font-size:25px;
+            text-align:center;
+            line-height:200px;
+            border-radius:20px;
+        }
+        .intro{
+            font-family:'Lexend Giga';
+            font-size:20px;
+            margin:20px;
+            text-align:left;
+            font-weight:200;
+            color:rgb(50, 112, 165);
+            font-weight: 400;
+        }
+
+        footer{
+            background-color: #111;
+
+        }
+        .footerContainer{
+            width: 100%;
+            padding: 70px 30px 20px;
+
+        }
+        .socialIcons{
+            display:flex;
+            justify-content: center;
+
+        }
+        .socialIcons a{
+            text-decoration:none;
+            padding:10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+        .socialIcons a i{
+            foct-size: 2em;
+            color:black;
+            opacity:0.9;
+        }
+
+        .socialIcons a:hover{
+            color:white;
+            transition:0.5s;
+        }
+
+        .footerNav{
+            margin: 30px 0;
+        }
+
+        .footerNav ul{
+            display:flex;
+            justify-content: center;
+        }
+        .footerNav ul li a{
+            color:white;
+            margin: 20px;
+            text-decoration:none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition:0.5s;
+        }
+        .footerNav ul li a:hover{
+            opacity:1;
+        }
+        .navdiv ul li a:hover{
+            color:black;
+        }
+        
+        marquee{
+            color:white;
+            font-family:'Lexend Giga';
+            font-size: 30px;
+        }
+
+        .outerplace{
+            display:flex;
+            justify-content: space-around;
+        }
+        .places{
+            
+            padding:10px;
+            text-align: center;
+        }
+        .places img:hover{
+            opacity:0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        Explore the Heart of <span>Incredible India!</span>
+    </header>
+    <nav class="navigation">
+        <div class="navdiv">
+            <div class="logo">
+                BharatTourism
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="heritage.html">Heritage</a></li>
+                    <li><a href="hotel registration.html">Hotel Booking</a></li>
+                    <li><a href="gallery2.html">Gallery</a></li>
+                    <button><a href="log in.html">Log In</a></button>
+                    <button><a href="sign up.html">Sign Up</a></button>
+                </ul>
+            </div> 
+    </nav>
+
+    
+
+
+    <div class="intro">
+        
+    Namaste!
+    At BharatTourism, we invite you to embark on a journey to discover the enchanting beauty, vibrant culture, and timeless heritage of India. From the snow-capped peaks of the Himalayas to the golden sands of Rajasthan’s deserts, from the serene backwaters of Kerala to the bustling streets of Mumbai and Delhi, India is a land of unmatched diversity and wonder.
+    
+    Whether you're seeking spiritual tranquility at ancient temples, a taste of exotic cuisine, or thrilling adventures amidst breathtaking landscapes, India has something for every traveler. Explore the architectural marvels like the Taj Mahal, delve into the serene forests of the Sundarbans, or experience the colorful festivals that light up every corner of this incredible land.
+    
+    At BharatTourism, our mission is to provide you with an unforgettable travel!
+    </div>
+    <marquee>Flights to Odisha have been cancelled due to the current cyclonic conditions that prevail in the region. Any inconvenience caused is deeply regretted.</marquee>
+      <div class="outerplace">
+    <div class="places">
+        <a href="hotel registration.html"><img src="https://cdn1.tripoto.com/media/filter/tst/img/1791424/Image/1587386425_3_15.jpg" alt="kashmir" width="400px"></a>
+            <a href="hotel registration.html"><img src="https://cdn1.tripoto.com/media/filter/tst/img/1768576/Image/1583753442_1569417107_kerala.jpg" alt="kerala" width="400px"></a>
+                <a href="hotel registration.html"><img src="https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1648199743_meghalaya_b_1.png" alt="meghalaya" width="400px"></a>
+    </div>
+    </div>
+    
+    <div class="footerContainer">
+
+        <div class=socialIcons>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="https://x.com/?mx=2"><i class="fa-brands fa-twitter"></i></a> 
+            <a href="https://support.google.com/accounts/thread/59269903/google-plus?hl=en"><i class="fa-brands fa-google-plus"></i></a> 
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>  
+        </div>
+
+   </div>
+   <div class="footerNav">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="https://epaper.thehindu.com/reader">News</a></li>
+        <li><a href="heritage.html">About</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Our Team</a></li>
+    </ul>
+   </div>
+
+   <div class="footerBottom">
+    <p> Copyright &copy; 2025; Designed by <span class="designer">24CSB0B19</span></p>
+   </div>
+    
+</body>
+</html>
