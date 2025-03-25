@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        iframe {
+            width: 90%;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Control Your E88 Drone</h1>
+    
+    <!-- Try to open the app directly -->
+    <button onclick="openDroneApp()">Open Drone App</button>
+
+    <!-- Open via Intent (for Android) -->
+    <a href="intent://wifi_cam#Intent;package=com.tzh.wifi.wificam.activity;end;">
+        <button>Open via Intent (Android)</button>
+    </a>
+
+    <!-- Redirect to Play Store if not installed -->
+    <a href="https://play.google.com/store/apps/details?id=com.tzh.wifi.wificam.activity" target="_blank">
+        <button>Download/Open Drone App</button>
+    </a>
+
+    <!-- Try embedding the drone's web interface (if available) -->
+    <h2>Drone Camera Feed (If Supported)</h2>
+    <iframe src="http://192.168.4.1"></iframe>
+
+    <script>
+        function openDroneApp() {
+            // Try to open the WIFI_cam app directly
+            window.location.href = "wifi_cam://";
+
+            // If the app doesn't open, redirect to the Play Store after 3 seconds
+            setTimeout(function() {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.tzh.wifi.wificam.activity"; 
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
