@@ -1,35 +1,4 @@
-/*<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullName = trim($_POST['fullName']);
-    $passportNumber = trim($_POST['passportNumber']);
-    $country = trim($_POST['country']);
-    
-    $errors = [];
-    
-    // Validate Full Name
-    if (empty($fullName)) {
-        $errors[] = "Full Name is required.";
-    }
-    
-    // Validate Passport Number
-    if (empty($passportNumber)) {
-        $errors[] = "Passport Number is required.";
-    } elseif (strlen($passportNumber) < 8 || strlen($passportNumber) > 10) {
-        $errors[] = "Invalid Passport Number. It should be 8-10 characters long.";
-    }
-    
-    // Validate Country
-    if (empty($country)) {
-        $errors[] = "Please select a country.";
-    }
-    
-    if (empty($errors)) {
-        echo "<p style='color: green;'>Visa application submitted successfully!</p>";
-    } else {
-        echo "<p style='color: red;'>" . implode("<br>", $errors) . "</p>";
-    }
-}
-?>*/
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
